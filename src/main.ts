@@ -18,7 +18,8 @@ import {
   SCHEDULER_EVENTS,
   SCHEDULER_RESOURCES,
 } from './shared-data';
-import '@revolist/revogrid-enterprise/dist/revogrid-enterprise.css';
+import '@revolist/revogrid-pro/dist/rv-pro-trial.css';
+import '@revolist/revogrid-enterprise/dist/rv-enterprise-trial.css';
 import './styles.css';
 
 defineCustomElements();

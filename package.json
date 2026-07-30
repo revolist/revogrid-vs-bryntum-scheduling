@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@revolist/revogrid": "4.23.21",
-    "@revolist/revogrid-enterprise": "2.2.13",
-    "@revolist/revogrid-pro": "2.2.13"
+    "@revolist/revogrid-enterprise": "npm:@revolist/rv-enterprise-trial@2.2.13",
+    "@revolist/revogrid-pro": "npm:@revolist/rv-pro-trial@2.2.13"
   },
   "devDependencies": {
     "@playwright/test": "1.59.1",
@@ -29,4 +29,3 @@
     "vite": "7.3.5"
   }
 }
-

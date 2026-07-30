@@ -31,22 +31,25 @@ Every dependency is exact, and `pnpm-lock.yaml` is committed.
 | Package or tool | Version |
 | --- | --- |
 | `@revolist/revogrid` | `4.23.21` |
-| `@revolist/revogrid-pro` | `2.2.13` |
-| `@revolist/revogrid-enterprise` | `2.2.13` |
+| `@revolist/revogrid-pro` | `npm:@revolist/rv-pro-trial@2.2.13` |
+| `@revolist/revogrid-enterprise` | `npm:@revolist/rv-enterprise-trial@2.2.13` |
 | Vite | `7.3.5` |
 | TypeScript | `5.9.3` |
 | Playwright | `1.59.1` |
 | Node.js | `24.13.0` |
 | pnpm | `10.5.2` |
 
-These are comparison-era RevoGrid versions. The repository is intended to show
-that the dedicated Event Scheduler existed alongside the Gantt
+These are comparison-era RevoGrid versions. The Pro and Enterprise entries are
+exact-version npm aliases to RevoGrid's corresponding trial packages, so the
+source keeps the production import paths shown in the comparison while the
+public reproduction uses trial distributions. The repository is intended to
+show that the dedicated Event Scheduler existed alongside the Gantt
 resource-planning surface during the comparison window.
 
 ## Registry authentication
 
-RevoGrid Pro and Enterprise are commercial packages published to the private
-GitHub Packages registry. Your account needs a package entitlement and a token
+The RevoGrid Pro and Enterprise trial packages are published to the private
+GitHub Packages registry. Your account needs trial package access and a token
 with `read:packages`.
 
 ```sh
@@ -56,7 +59,7 @@ pnpm install --frozen-lockfile
 
 The Pages workflow runs only on trusted pushes to `main`. It uses the repository
 `GITHUB_TOKEN` with `packages: read`; the repository must be granted read access
-to the RevoGrid Pro and Enterprise packages.
+to the `rv-pro-trial` and `rv-enterprise-trial` packages.
 
 ## Run and verify
 
@@ -95,5 +98,5 @@ parity, or product-ranking claim. It demonstrates one factual distinction:
 Bryntum mounted RevoGrid’s Gantt resource-planning view, while RevoGrid also
 ships a dedicated Event Scheduler resource-timeline plugin.
 
-The benchmark wrapper is MIT licensed. RevoGrid Pro and Enterprise remain
-commercial dependencies governed by their own license terms.
+The benchmark wrapper is MIT licensed. RevoGrid Pro and Enterprise trial
+dependencies remain governed by their own license terms.
