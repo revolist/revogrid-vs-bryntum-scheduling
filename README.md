@@ -4,6 +4,8 @@ Bryntum’s July 2026 comparison mounted RevoGrid’s Gantt plugin and resource-
 
 The source comparison is Bryntum’s [July 2026 article](https://bryntum.com/blog/revogrid-vs-bryntum-javascript-scheduler-comparison-2026/) and its [public reproduction repository](https://github.com/bryntum/bryntum-vs-revogrid-scheduling).
 
+[Open the live benchmark](https://benchmark.rv-grid.com/).
+
 ![RevoGrid Gantt and Event Scheduler shown with the same resources and events](assets/revogrid-scheduling-surfaces.gif)
 
 ## What this repository mounts
