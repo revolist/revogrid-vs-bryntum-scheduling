@@ -4,9 +4,15 @@ Bryntum’s July 2026 comparison mounted RevoGrid’s Gantt plugin and resource-
 
 The source comparison is Bryntum’s [July 2026 article](https://bryntum.com/blog/revogrid-vs-bryntum-javascript-scheduler-comparison-2026/) and its [public reproduction repository](https://github.com/bryntum/bryntum-vs-revogrid-scheduling).
 
-[Open the live benchmark](https://benchmark.rv-grid.com/).
+[Open the live benchmark](https://benchmark.rv-grid.com/revogrid-vs-bryntum-scheduling/).
 
 ![RevoGrid Gantt and Event Scheduler shown with the same resources and events](assets/revogrid-scheduling-surfaces.gif)
+
+## Read the example
+
+Start with `src/data.ts` for the shared resources, events, and two small
+adapters. Then read `src/main.ts` from top to bottom: page markup, Gantt setup,
+Scheduler setup, and the drag-result message.
 
 ## What this repository mounts
 
@@ -32,27 +38,24 @@ Every dependency is exact, and `pnpm-lock.yaml` is committed.
 
 | Package or tool | Version |
 | --- | --- |
-| `@revolist/revogrid` | `4.23.21` |
-| `@revolist/revogrid-pro` | `npm:@revolist/rv-pro-trial@2.2.13` |
-| `@revolist/revogrid-enterprise` | `npm:@revolist/rv-enterprise-trial@2.2.13` |
+| `@revolist/revogrid` | `4.24.2` |
+| `@revolist/revogrid-pro` | `npm:@revolist/rv-pro-trial@2.4.0` |
+| `@revolist/revogrid-enterprise` | `npm:@revolist/rv-enterprise-trial@2.4.0` |
 | Vite | `7.3.5` |
 | TypeScript | `5.9.3` |
 | Playwright | `1.59.1` |
 | Node.js | `24.13.0` |
 | pnpm | `10.5.2` |
 
-These are comparison-era RevoGrid versions. The Pro and Enterprise entries are
-exact-version npm aliases to RevoGrid's corresponding trial packages, so the
-source keeps the production import paths shown in the comparison while the
-public reproduction uses trial distributions. The repository is intended to
-show that the dedicated Event Scheduler existed alongside the Gantt
-resource-planning surface during the comparison window.
+The Pro and Enterprise entries are exact-version npm aliases to RevoGrid's
+corresponding trial packages, so the source keeps the production import paths
+shown in the comparison while the public reproduction uses trial distributions.
 
 ## Registry authentication
 
-The RevoGrid Pro and Enterprise trial packages are published to the private
-GitHub Packages registry. Your account needs trial package access and a token
-with `read:packages`.
+The RevoGrid Pro and Enterprise trial packages are published through GitHub
+Packages. Your account needs access to both trial packages and a token with
+`read:packages`.
 
 ```sh
 export NODE_AUTH_TOKEN=YOUR_GITHUB_PACKAGES_TOKEN
@@ -71,6 +74,10 @@ pnpm typecheck
 pnpm build
 pnpm test:e2e
 ```
+
+The local demo is available at
+`http://localhost:5173/revogrid-vs-bryntum-scheduling/`. The domain root is a
+small index so additional benchmarks can use their own named paths.
 
 The test suite contains exactly three Chromium tests:
 

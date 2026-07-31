@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://benchmark.rv-grid.com/revogrid-vs-bryntum-scheduling/
     steps:
       - name: Check out repository
         uses: actions/checkout@v4

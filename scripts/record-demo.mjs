@@ -7,7 +7,8 @@ const root = resolve(import.meta.dirname, '..');
 const rawVideoDirectory = resolve(root, 'assets', 'raw-video');
 const webmPath = resolve(root, 'assets', 'revogrid-scheduling-surfaces.webm');
 const gifPath = resolve(root, 'assets', 'revogrid-scheduling-surfaces.gif');
-const serverUrl = 'http://127.0.0.1:4173';
+const serverUrl =
+  'http://127.0.0.1:4173/revogrid-vs-bryntum-scheduling/';
 
 await mkdir(rawVideoDirectory, { recursive: true });
 

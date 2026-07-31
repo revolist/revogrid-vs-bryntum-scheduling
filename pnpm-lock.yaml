@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@revolist/revogrid':
-        specifier: 4.23.21
-        version: 4.23.21
+        specifier: 4.24.2
+        version: 4.24.2
       '@revolist/revogrid-enterprise':
-        specifier: npm:@revolist/rv-enterprise-trial@2.2.13
-        version: '@revolist/rv-enterprise-trial@2.2.13'
+        specifier: npm:@revolist/rv-enterprise-trial@2.4.0
+        version: '@revolist/rv-enterprise-trial@2.4.0'
       '@revolist/revogrid-pro':
-        specifier: npm:@revolist/rv-pro-trial@2.2.13
-        version: '@revolist/rv-pro-trial@2.2.13'
+        specifier: npm:@revolist/rv-pro-trial@2.4.0
+        version: '@revolist/rv-pro-trial@2.4.0'
     devDependencies:
       '@playwright/test':
         specifier: 1.59.1
@@ -211,14 +211,14 @@ packages:
   '@revolist/revogrid-column-select@3.2.0':
     resolution: {integrity: sha512-qh/TX2EmloeFYXYgLDZxv8N1YWQOv3XDwwEpxOLwFz/QWy4xXmwyL/RRYKtJXjBbKQblmdRVXUkyUhmENrxZGg==, tarball: https://npm.pkg.github.com/download/@revolist/revogrid-column-select/3.2.0/6b07553b9b0f5abf31df1efb12eddff5a21cfaa8}
 
-  '@revolist/revogrid@4.23.21':
-    resolution: {integrity: sha512-a17F8GUlyXaIGfgHL7egFn8OVvR5EOLWJct2/wX3eCcrYptLolOhDIo5O2bd5O4qBPXMfVzibZ/EgJIJRLjaEQ==, tarball: https://npm.pkg.github.com/download/@revolist/revogrid/4.23.21/3355bfb974fdad71bf2f214ba0dd169f62663af7}
+  '@revolist/revogrid@4.24.2':
+    resolution: {integrity: sha512-WizTRPlMWJV3q6+99FH5/iN1JBZ98wIUe2dKDIsIDjWYRSO+svlSuKMkUjiCYFYwIoGuf2x82umCV2q+/QnB5A==}
 
-  '@revolist/rv-enterprise-trial@2.2.13':
-    resolution: {integrity: sha512-s62fZk6n1TS/VNB8JA0reLSf6fwacV6tkZYpmzcSsa1zVdQuVqnM8QY4QIY++RpFh7Yl3zdqSSlKLRPZsPw5tA==, tarball: https://npm.pkg.github.com/download/@revolist/rv-enterprise-trial/2.2.13/a30f6db0d2d79532ecc20e8da01c4c130797dddc}
+  '@revolist/rv-enterprise-trial@2.4.0':
+    resolution: {integrity: sha512-uyznTtvIUiLexZjomL4ORlGSifll/rFCAunEAVIlVVYd/IYzE+7jn+wqWqtqKNHrEeB3j04SbWDsWIFR6ZY+6A==, tarball: https://npm.pkg.github.com/download/@revolist/rv-enterprise-trial/2.4.0/a8c66236759aa5401ad1c0f8549d1ff01d261ce1}
 
-  '@revolist/rv-pro-trial@2.2.13':
-    resolution: {integrity: sha512-vnQJT9F/L3nVlHmyED6r1GrzT8NQuJBp2KZB8psQiW6MMi+7VPoplV6hFaINPt63xDX2AfhvryWfIvZdrzfGig==, tarball: https://npm.pkg.github.com/download/@revolist/rv-pro-trial/2.2.13/f03951f5de0aec941c3a9e736d81f93c6ffa6a44}
+  '@revolist/rv-pro-trial@2.4.0':
+    resolution: {integrity: sha512-19BdLuDLvzEiHcx7yR9a1h25EfUAGoOKO0giX3kcHhzWMLHSOZKmw8CVPXDAnJu0lHRQlXCC93noMrtiZXtGFw==, tarball: https://npm.pkg.github.com/download/@revolist/rv-pro-trial/2.4.0/a13881fbf4a2addf5b1b8b26b54623f507ac7978}
 
   '@rollup/rollup-android-arm-eabi@4.62.3':
     resolution: {integrity: sha512-c0wdcekXtQvvn5Tsrk/+op/gUArrbWaFduBnTLP2l1cKLSQs4diMWjJw3m6A0DdzT8dAAX95KpkJ3qynCePbmw==}
@@ -629,22 +629,22 @@ snapshots:
       '@revolist/revo-dropdown': 3.0.9
       '@stencil/core': 4.43.5
 
-  '@revolist/revogrid@4.23.21': {}
+  '@revolist/revogrid@4.24.2': {}
 
-  '@revolist/rv-enterprise-trial@2.2.13':
+  '@revolist/rv-enterprise-trial@2.4.0':
     dependencies:
       '@fortawesome/fontawesome-free': 6.7.2
       '@revolist/revogrid-column-date': 2.0.25
       '@revolist/revogrid-column-select': 3.2.0
-      '@revolist/rv-pro-trial': 2.2.13
+      '@revolist/rv-pro-trial': 2.4.0
       preact: 10.29.7
     transitivePeerDependencies:
       - preact-render-to-string
 
-  '@revolist/rv-pro-trial@2.2.13':
+  '@revolist/rv-pro-trial@2.4.0':
     dependencies:
       '@formulajs/formulajs': 4.6.1
-      '@revolist/revogrid': 4.23.21
+      '@revolist/revogrid': 4.24.2
       write-excel-file: 4.1.1
 
   '@rollup/rollup-android-arm-eabi@4.62.3':
