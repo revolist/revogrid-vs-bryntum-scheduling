@@ -65,7 +65,7 @@ jobs:
         run: pnpm build
 
       - name: Install scheduler review dependencies
-        run: pnpm --dir .sources/revogrid-scheduler-review-samples install --frozen-lockfile
+        run: pnpm --dir .sources/revogrid-scheduler-review-samples install --frozen-lockfile --ignore-workspace
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
