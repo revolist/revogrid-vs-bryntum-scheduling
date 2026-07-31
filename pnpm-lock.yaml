@@ -4,12 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@revolist/revogrid@4.24.2': https://registry.npmjs.org/@revolist/revogrid/-/revogrid-4.24.2.tgz
+
 importers:
 
   .:
     dependencies:
       '@revolist/revogrid':
-        specifier: 4.24.2
+        specifier: https://registry.npmjs.org/@revolist/revogrid/-/revogrid-4.24.2.tgz
         version: 4.24.2
       '@revolist/revogrid-enterprise':
         specifier: npm:@revolist/rv-enterprise-trial@2.4.0
@@ -212,7 +215,7 @@ packages:
     resolution: {integrity: sha512-qh/TX2EmloeFYXYgLDZxv8N1YWQOv3XDwwEpxOLwFz/QWy4xXmwyL/RRYKtJXjBbKQblmdRVXUkyUhmENrxZGg==, tarball: https://npm.pkg.github.com/download/@revolist/revogrid-column-select/3.2.0/6b07553b9b0f5abf31df1efb12eddff5a21cfaa8}
 
   '@revolist/revogrid@4.24.2':
-    resolution: {integrity: sha512-WizTRPlMWJV3q6+99FH5/iN1JBZ98wIUe2dKDIsIDjWYRSO+svlSuKMkUjiCYFYwIoGuf2x82umCV2q+/QnB5A==}
+    resolution: {integrity: sha512-WizTRPlMWJV3q6+99FH5/iN1JBZ98wIUe2dKDIsIDjWYRSO+svlSuKMkUjiCYFYwIoGuf2x82umCV2q+/QnB5A==, tarball: https://registry.npmjs.org/@revolist/revogrid/-/revogrid-4.24.2.tgz}
 
   '@revolist/rv-enterprise-trial@2.4.0':
     resolution: {integrity: sha512-uyznTtvIUiLexZjomL4ORlGSifll/rFCAunEAVIlVVYd/IYzE+7jn+wqWqtqKNHrEeB3j04SbWDsWIFR6ZY+6A==, tarball: https://npm.pkg.github.com/download/@revolist/rv-enterprise-trial/2.4.0/a8c66236759aa5401ad1c0f8549d1ff01d261ce1}

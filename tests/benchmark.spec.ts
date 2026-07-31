@@ -96,6 +96,29 @@ test('shows the Gantt resource view and dedicated Scheduler', async ({ page }) =
     'Sam Ortiz',
     'Lisa Wong',
   ]);
+
+  const scheduler = page.locator('#event-scheduler-grid');
+  await scheduler
+    .locator('.event-scheduler-timeline-header')
+    .first()
+    .click({ button: 'right' });
+  await scheduler
+    .locator('.rv-context-menu')
+    .getByRole('menuitem', { name: 'Zoom in', exact: true })
+    .click();
+
+  const timeline = scheduler.locator(
+    'revogr-viewport-scroll.rgCol:not([row-header])',
+  );
+  await expect.poll(() => timeline.evaluate(
+    (element) => element.scrollWidth > element.clientWidth,
+  )).toBe(true);
+
+  await timeline.hover();
+  await page.mouse.wheel(240, 0);
+  await expect.poll(() => timeline.evaluate(
+    (element) => element.scrollLeft,
+  )).toBeGreaterThan(0);
 });
 
 test('moves Hotfix deploy from Alex to Nina', async ({ page }) => {

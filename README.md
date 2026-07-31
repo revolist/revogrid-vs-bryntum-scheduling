@@ -62,6 +62,10 @@ export NODE_AUTH_TOKEN=YOUR_GITHUB_PACKAGES_TOKEN
 pnpm install --frozen-lockfile
 ```
 
+The trial packages come from GitHub Packages, while RevoGrid core is public on
+npmjs. The pinned pnpm override in `package.json` keeps core on its exact npmjs
+tarball even though the `@revolist` scope is authenticated against GitHub.
+
 The Pages workflow runs only on trusted pushes to `main`. It uses the repository
 `GITHUB_TOKEN` with `packages: read`; the repository must be granted read access
 to the `rv-pro-trial` and `rv-enterprise-trial` packages.

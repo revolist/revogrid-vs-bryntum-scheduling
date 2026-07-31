@@ -27,5 +27,10 @@
     "@types/node": "24.12.2",
     "typescript": "5.9.3",
     "vite": "7.3.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@revolist/revogrid@4.24.2": "https://registry.npmjs.org/@revolist/revogrid/-/revogrid-4.24.2.tgz"
+    }
   }
 }
