@@ -25,6 +25,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Check out scheduler review samples
+        uses: actions/checkout@v4
+        with:
+          repository: revolist/revogrid-scheduler-review-samples
+          path: .sources/revogrid-scheduler-review-samples
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -35,6 +41,9 @@ jobs:
         with:
           node-version: 24.13.0
           cache: pnpm
+          cache-dependency-path: |
+            pnpm-lock.yaml
+            .sources/revogrid-scheduler-review-samples/pnpm-lock.yaml
           registry-url: https://npm.pkg.github.com
           scope: '@revolist'
 
@@ -54,6 +63,21 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Install scheduler review dependencies
+        run: pnpm --dir .sources/revogrid-scheduler-review-samples install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build scheduler review samples
+        run: pnpm --dir .sources/revogrid-scheduler-review-samples build
+        env:
+          VITE_BASE_PATH: /revogrid-scheduler-review-samples/
+
+      - name: Add scheduler review to benchmark site
+        run: |
+          mkdir -p dist/revogrid-scheduler-review-samples
+          cp -R .sources/revogrid-scheduler-review-samples/dist/. dist/revogrid-scheduler-review-samples/
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

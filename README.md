@@ -6,6 +6,8 @@ The source comparison is Bryntum’s [July 2026 article](https://bryntum.com/blo
 
 [Open the live benchmark](https://benchmark.rv-grid.com/revogrid-vs-bryntum-scheduling/).
 
+The benchmark hub also publishes the companion [Scheduler review samples](https://benchmark.rv-grid.com/revogrid-scheduler-review-samples/) from [`revolist/revogrid-scheduler-review-samples`](https://github.com/revolist/revogrid-scheduler-review-samples).
+
 ![RevoGrid Gantt and Event Scheduler shown with the same resources and events](assets/revogrid-scheduling-surfaces.gif)
 
 ## Read the example
